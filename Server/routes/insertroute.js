@@ -12,12 +12,13 @@ router.post("/", async (req, res) => {
       .insertMany(data)
       .then((data) => {
         // console.log("this si", data);
-        res.json(data).status(200);
+        res.send(200);
       })
       .catch((err) => {
         res.send(500);
       });
   });
   client.close();
+  res.send(500);
 });
 module.exports = router;

@@ -4,9 +4,23 @@ const data = require("../Database/userdata");
 router.post("/", (req, res) => {
   //connecting to mongodb
 
-  // console.log("this is the request");
-  // client.connect()
-  // res.send(200);
+  //someerror is occuring
+  //   await client.connect(async (err) => {
+  //     const collection = client.db("uploadingVideo").collection("jobseekers");
+  //     // perform actions on the collection object
+  //     collection
+  //       .find({userdata: {$eq: req.body.userprofile}})
+  //       .then((data) => {
+  //         // console.log("this si", data);
+  //         res.send(data);
+  //       })
+  //       .catch((err) => {
+  //         res.send(500);
+  //       });
+  //   });
+  //   client.close();
+  //   res.send(500);
+  // });
   const seeker = req.body.formdata;
   const filteredData = data.filter((element) => {
     if (element.jc === seeker) return true;
